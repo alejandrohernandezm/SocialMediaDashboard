@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | [Alejandro Hernández]</title>
+
+
+</head>
+
+<body>
+    <div [ngClass]="darkThemeMode? 'backGroundDark' : 'backGroundLight'">
+        <div class="box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div [ngClass]="darkThemeMode? 'titleDark' : 'title'">Social Mediad Dashboard</div>
+                        <div class="subtitle">
+                            <p>Total Followers: 23,004</p>
+                        </div>
+                    </div>
+                    <div [ngClass]="darkThemeMode? 'likesTextDark text' : 'likesText text'">Dark Mode</div>
+                    <br>
+                    <label class="switch">
+                        <input type="checkbox" (click)="toggleTheme()">
+                        <span class="slider round"></span>
+                    </label>
+
+                    <div class="col-lg-3">
+                        <br>
+                        <div [ngClass]="darkThemeMode? 'card-mediaDark text-center box-partDark' : 'card-media text-center box-part'">
+                            <div [ngClass]="darkThemeMode? 'borderFacebookDark' : 'borderFacebook'">
+                                <br>
+                                <div [ngClass]="darkThemeMode? 'textAccountsDark' : 'textAccounts'"> <p> <img src="assets/images/icon-facebook.svg">  @nathanf</p></div>
+                                <div class="title">
+                                    <div [ngClass]="darkThemeMode? 'followersTextDark' : 'followersTextLight'">1987
+                                    </div>
+                                    <div [ngClass]="darkThemeMode? 'followersTextColorDark' : 'followersTextColorLight'">FOLLOWERS</div>
+                                    <div class="up">
+                                        <P><img src="assets/images/icon-up.svg">12 Today</P>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <br>
+                        <div [ngClass]="darkThemeMode? 'card-mediaDark text-center box-partDark' : 'card-media text-center box-part'">
+                            <div [ngClass]="darkThemeMode? 'borderTwitterDark' : 'borderTwitter'">
+                                <br>
+                                <div [ngClass]="darkThemeMode? 'textAccountsDark' : 'textAccounts'"> <p> <img src="assets/images/icon-twitter.svg">  @nathanf</p></div>
+                                <div class="title">
+                                    <div [ngClass]="darkThemeMode? 'followersTextDark' : 'followersTextLight'">1044
+                                    </div>
+                                    <div [ngClass]="darkThemeMode? 'followersTextColorDark' : 'followersTextColorLight'">FOLLOWERS</div>
+                                    <div class="up">
+                                        <P><img src="assets/images/icon-up.svg">99 Today</P>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <br>
+                        <div [ngClass]="darkThemeMode? 'card-mediaDark text-center box-partDark' : 'card-media text-center box-part'">
+                            <div class="borderInstagram">
+                                <br>
+                                <div [ngClass]="darkThemeMode? 'textAccountsDark' : 'textAccounts'"> <p> <img src="assets/images/icon-instagram.svg">  @realNathanf</p></div>
+                                <div class="title">
+                                    <div [ngClass]="darkThemeMode? 'followersTextDark' : 'followersTextLight'">11k</div>
+                                    <div [ngClass]="darkThemeMode? 'followersTextColorDark' : 'followersTextColorLight'">FOLLOWERS</div>
+                                    <div class="up">
+                                        <p><img src="assets/images/icon-up.svg">1099 Today</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <br>
+                        <div [ngClass]="darkThemeMode? 'card-mediaDark text-center box-partDark' : 'card-media text-center box-part'">
+                            <div [ngClass]="darkThemeMode? 'borderYoutubeDark' : 'borderYoutube'">
+                                <br>
+                                <div [ngClass]="darkThemeMode? 'textAccountsDark' : 'textAccounts'"> <p> <img src="assets/images/icon-youtube.svg">  Nathan F.</p></div>
+                                <div class="title">
+                                    <div [ngClass]="darkThemeMode? 'followersTextDark' : 'followersTextLight'">8239
+                                    </div>
+                                    <div [ngClass]="darkThemeMode? 'followersTextColorDark' : 'followersTextColorLight'">SUBSCRIBERS</div>
+                                    <div class="down">
+                                        <div class="down">
+                                            <p><img src="assets/images/icon-down.svg">144 Today</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="container">
+                <div [ngClass]="darkThemeMode? 'OverviewDark' : 'OverviewLight'">Overview - Today</div>
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        <br>
+                        <div [ngClass]="darkThemeMode? 'card-mediaDark box-partDark' : 'card-media box-part'">
+                            <div class="row">
+                                <div class="col-sm-6 col">
+                                    <br>
+                                    <div class="cardsPosition">
+                                        <div [ngClass]="darkThemeMode? 'likesTextDark' : 'likesText'">Page Views</div>
+                                        <div [ngClass]="darkThemeMode? 'likesNumberDark' : 'likesNumber'"> 87 </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col">
+                                    <br>
+                                    <div class="cardsPositionIcons">
+                                        <img src=" assets/images/icon-facebook.svg">
+                                        <br><br>
+                                        <div class="up likesPercent"><img src="assets/images/icon-up.svg">3%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <br>
+                        <div [ngClass]="darkThemeMode? 'card-mediaDark box-partDark' : 'card-media box-part'">
+                            <div class="row">
+                                <div class="col-sm-6 col">
+                                    <br>
+                                    <div class="cardsPosition">
+                                        <div [ngClass]="darkThemeMode? 'likesTextDark' : 'likesText'">Likes</div>
+                                        <div [ngClass]="darkThemeMode? 'likesNumberDark' : 'likesNumber'">52</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col">
+                                    <br>
+                                    <div class="cardsPositionIcons">
+                                        <img src="assets/images/icon-facebook.svg">
+                                        <br><br>
+                                        <div class="down likesPercent"> <img src="assets/images/icon-down.svg">2%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <br>
+                        <div [ngClass]="darkThemeMode? 'card-mediaDark box-partDark' : 'card-media box-part'">
+                            <div class="row">
+                                <div class="col-sm-6 col">
+                                    <br>
+                                    <div class="cardsPosition">
+                                        <div [ngClass]="darkThemeMode? 'likesTextDark' : 'likesText'">Likes</div>
+                                        <div [ngClass]="darkThemeMode? 'likesNumberDark' : 'likesNumber'">5462</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col">
+                                    <br>
+                                    <div class="cardsPositionIcons">
+                                        <img src="assets/images/icon-instagram.svg">
+                                    </div>
+                                    <br>
+                                    <div class="up likesPercent cardsPosition2"> <img
+                                            src="assets/images/icon-up.svg">2257%
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <br>
+                        <div [ngClass]="darkThemeMode? 'card-mediaDark box-partDark' : 'card-media box-part'">
+                            <div class="row">
+                                <div class="col-sm-6 col">
+                                    <br>
+                                    <div class="cardsPosition">
+                                        <div [ngClass]="darkThemeMode? 'likesTextDark' : 'likesText'">Profile Views</div>
+                                        <div [ngClass]="darkThemeMode? 'likesNumberDark' : 'likesNumber'">52k</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col">
+                                    <br>
+                                    <div class="cardsPositionIcons">
+                                        <img src="assets/images/icon-instagram.svg">
+                                    </div>
+                                    <br>
+                                    <div class="up likesPercent cardsPosition2"> <img
+                                            src="assets/images/icon-up.svg">1375%
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <br>
+                        <div [ngClass]="darkThemeMode? 'card-mediaDark box-partDark' : 'card-media box-part'">
+                            <div class="row">
+                                <div class="col-sm-6 col">
+                                    <br>
+                                    <div class="cardsPosition">
+                                        <div [ngClass]="darkThemeMode? 'likesTextDark' : 'likesText'">Retweets</div>
+                                        <div [ngClass]="darkThemeMode? 'likesNumberDark' : 'likesNumber'">117</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col">
+                                    <br>
+                                    <div class="cardsPositionIcons">
+                                        <img src="assets/images/icon-twitter.svg">
+                                    </div>
+                                    <br>
+                                    <div class="up likesPercent cardsPosition2"> <img
+                                            src="assets/images/icon-up.svg">303%
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <br>
+                        <div [ngClass]="darkThemeMode? 'card-mediaDark box-partDark' : 'card-media box-part'">
+                            <div class="row">
+                                <div class="col-sm-6 col">
+                                    <br>
+                                    <div class="cardsPosition">
+                                        <div [ngClass]="darkThemeMode? 'likesTextDark' : 'likesText'">Likes</div>
+                                        <div [ngClass]="darkThemeMode? 'likesNumberDark' : 'likesNumber'">507</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col">
+                                    <br>
+                                    <div class="cardsPositionIcons">
+                                        <img src="assets/images/icon-twitter.svg">
+                                    </div>
+                                    <br>
+                                    <div class="up likesPercent cardsPosition2"> <img
+                                            src="assets/images/icon-up.svg">553%
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <br>
+                        <div [ngClass]="darkThemeMode? 'card-mediaDark box-partDark' : 'card-media box-part'">
+                            <div class="row">
+                                <div class="col-sm-6 col">
+                                    <br>
+                                    <div class="cardsPosition">
+                                        <div [ngClass]="darkThemeMode? 'likesTextDark' : 'likesText'">Likes</div>
+                                        <div [ngClass]="darkThemeMode? 'likesNumberDark' : 'likesNumber'">107</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col">
+                                    <br>
+                                    <div class="cardsPositionIcons">
+                                        <img src="assets/images/icon-youtube.svg">
+                                        <br><br>
+                                        <div class="down likesPercent"> <img src="assets/images/icon-down.svg">19%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <br>
+                        <div [ngClass]="darkThemeMode? 'card-mediaDark box-partDark' : 'card-media box-part'">
+                            <div class="row">
+                                <div class="col-sm-6 col">
+                                    <br>
+                                    <div class="cardsPosition">
+                                        <div [ngClass]="darkThemeMode? 'likesTextDark' : 'likesText'">Total Views</div>
+                                        <div [ngClass]="darkThemeMode? 'likesNumberDark' : 'likesNumber'">1407</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col">
+                                    <br>
+                                    <div class="cardsPositionIcons">
+                                        <img src="assets/images/icon-youtube.svg">
+                                        <br><br>
+                                        <div class="down likesPercent"> <img src="assets/images/icon-down.svg">12%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="subtitle text-center">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Alejandro Hernández</a>.
+            <br><br>
+        </div>
+    </div>
+</body>
+</html>
